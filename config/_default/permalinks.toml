@@ -1,3 +1,5 @@
 # Permalinks format of each content section
 post = "/post/:slug/"
+game = "/game/:slug/"
+code = "/code/:slug/"
 page = "/:slug/"
