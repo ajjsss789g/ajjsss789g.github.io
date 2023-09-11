@@ -6,5 +6,7 @@
 
 * { font-family: 'Noto Sans KR', sans-serif !important;font-weight: 400;}
 
+.article-page .main-article .article-content {word-break: keep-all;}
 .article-page .main-article .article-header .article-image {text-align: center;background: #fff;font-size: 0;padding: var(--card-padding);}
 .article-page .main-article .article-header .article-image img {max-width: 100%;width: auto;object-fit: contain;}
+

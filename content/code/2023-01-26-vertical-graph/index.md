@@ -8,13 +8,12 @@ image: https://media.githubusercontent.com/media/ajjsss789g/ajjsss789g.github.io
 categories:
     - CSS
 tags:
-    - CSS
     - 막대그래프
 ---
 CSS를 활용하여 데이터에 따라 자동으로 정렬되는 세로형 막대그래프를 만들어보았습니다.  
 아래는 그래프의 HTML과 CSS 코드 예시입니다.
 
-## 1. HTML 코드
+## HTML 코드
 
 그래프를 구성하는 HTML 요소입니다.
 
@@ -49,7 +48,7 @@ CSS를 활용하여 데이터에 따라 자동으로 정렬되는 세로형 막�
 </div>
 ```
 
-## 2. CSS 코드
+## CSS 코드
 
 그래프의 스타일을 정의하는 CSS 코드입니다.  
 데이터의 백분율 값뿐만 아니라 목록의 수도 변동되어야 할 경우, display: flex 속성을 활용하여 그래프를 유동적으로 정렬할 수 있습니다.
