@@ -20,32 +20,32 @@ Slick.js 플러그인을 활용하여 이미지 슬라이드와 함께 제목을
 
 ```html
 <div class="slider_wrap">
-  <!-- 이미지 슬라이드 -->
-  <div class="slider">
-    <div class="list"><img src="images/text1.png"></div>
-    <div class="list"><img src="images/text2.png"></div>
-    <div class="list"><img src="images/text3.png"></div>
-    <div class="list"><img src="images/text4.png"></div>
-  </div>
-  <!-- 진행 표시줄 -->
-  <ul class="progress">
-    <li>
-      <span class="bar"></span>
-      <strong class="tit">Slide 1</strong>
-    </li>
-    <li>
-      <span class="bar"></span>
-      <strong class="tit">Slide 2</strong>
-    </li>
-    <li>
-      <span class="bar"></span>
-      <strong class="tit">Slide 3</strong>
-    </li>
-    <li>
-      <span class="bar"></span>
-      <strong class="tit">Slide 4</strong>
-    </li>
-  </ul>
+    <!-- 이미지 슬라이드 -->
+    <div class="slider">
+        <div class="list"><img src="images/text1.png"></div>
+        <div class="list"><img src="images/text2.png"></div>
+        <div class="list"><img src="images/text3.png"></div>
+        <div class="list"><img src="images/text4.png"></div>
+    </div>
+    <!-- 진행 표시줄 -->
+    <ul class="progress">
+        <li>
+            <span class="bar"></span>
+            <strong class="tit">Slide 1</strong>
+        </li>
+        <li>
+            <span class="bar"></span>
+            <strong class="tit">Slide 2</strong>
+        </li>
+        <li>
+            <span class="bar"></span>
+            <strong class="tit">Slide 3</strong>
+        </li>
+        <li>
+            <span class="bar"></span>
+            <strong class="tit">Slide 4</strong>
+        </li>
+    </ul>
 </div>
 ```
 
@@ -66,8 +66,8 @@ Slick.js 플러그인을 활용하여 이미지 슬라이드와 함께 제목을
 .progress > li .bar {position: absolute;top: 0;left: 0;width: 0;height: 4px;background-color: #ffffff;}
 .progress > li.active .bar {animation:countingBar 3.5s linear forwards;}
 @keyframes countingBar {
-	0% {width: 0;}
-	100% {width:100%;}
+    0% {width: 0;}
+    100% {width:100%;}
 }
 .progress > li .tit {display: block;padding: 14px 0 10px;font-size: 14px;font-weight: 500;color: #fff;}
 ```
@@ -78,40 +78,40 @@ Slick 슬라이드와 진행 표시줄을 조작하는 jQuery 스크립트를 �
 
 ```js
 $(window).on('load', function() {
-  progress();
+    progress();
 });
 
 function progress(){
-  const $slider = $(".slider");
-  const $progress = $('.progress > li');
+    const $slider = $(".slider");
+    const $progress = $('.progress > li');
   
-  //슬라이드가 실행되면 첫번째 $progress에 active 추가
-  $slider.on('init', (event, slick) => {
-    $progress.eq(0).addClass('active');
-  });
+    //슬라이드가 실행되면 첫번째 $progress에 active 추가
+    $slider.on('init', (event, slick) => {
+        $progress.eq(0).addClass('active');
+    });
 
-  //슬라이드 실행
-  $slider.slick({
-    autoplay: true,
-    autoplaySpeed:3000,
-    speed: 500,
-    arrows: false,
-    fade: true,
-    infinite: true,
-  });
-  
-  //슬라이드가 바뀌면 $progress에 active 추가
-  $slider.on('beforeChange', (event, slick, currentSlide, nextSlide) => {
-    $progress.eq(nextSlide).addClass('active').siblings().removeClass('active');
-  });
+    //슬라이드 실행
+    $slider.slick({
+        autoplay: true,
+        autoplaySpeed:3000,
+        speed: 500,
+        arrows: false,
+        fade: true,
+        infinite: true,
+    });
+    
+    //슬라이드가 바뀌면 $progress에 active 추가
+    $slider.on('beforeChange', (event, slick, currentSlide, nextSlide) => {
+        $progress.eq(nextSlide).addClass('active').siblings().removeClass('active');
+    });
 
-  //$progress를 클릭했을 때, 해당 슬라이드로 이동
-  $progress.on('click', function (){
-    if (!$(this).hasClass('active')) {
-      const barIndex = $(this).index();
-      $slider.slick('slickGoTo', barIndex);
-    }
-  });
+    //$progress를 클릭했을 때, 해당 슬라이드로 이동
+    $progress.on('click', function (){
+        if (!$(this).hasClass('active')) {
+            const barIndex = $(this).index();
+            $slider.slick('slickGoTo', barIndex);
+        }
+    });
 };
 ```
 ### 코드 구성요소 및 기능 설명

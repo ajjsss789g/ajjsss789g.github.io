@@ -19,32 +19,32 @@ CSS를 활용하여 데이터에 따라 자동으로 정렬되는 세로형 막�
 
 ```html
 <div class="graph_wrap">
-  <strong class="tit">제목</strong>
-  <div class="graph">
-    <!-- 기준 -->
-    <ul class="y-axis">
-      <li><span>35</span></li>
-      <li><span>30</span></li>
-      <li><span>25</span></li>
-      <li><span>20</span></li>
-      <li><span>15</span></li>
-      <li><span>10</span></li>
-      <li><span>5</span></li>
-      <li><span>0</span></li>
-    </ul>
-    <!-- 목록 -->
-    <ul class="x-axis">
-      <li><span>목록1</span></li>
-      <li><span>목록2</span></li>
-      <li><span>목록3</span></li>
-    </ul>
-    <!-- 바 그래프 (백분율 만큼 heigh값) -->
-    <ul class="bar">
-      <li style="height:100%;"><span></span></li>
-      <li style="height:70%;"><span></span></li>
-      <li style="height:30%;"><span></span></li>
-    </ul>
-  </div>
+    <strong class="tit">제목</strong>
+    <div class="graph">
+        <!-- 기준 -->
+        <ul class="y-axis">
+            <li><span>35</span></li>
+            <li><span>30</span></li>
+            <li><span>25</span></li>
+            <li><span>20</span></li>
+            <li><span>15</span></li>
+            <li><span>10</span></li>
+            <li><span>5</span></li>
+            <li><span>0</span></li>
+        </ul>
+        <!-- 목록 -->
+        <ul class="x-axis">
+            <li><span>목록1</span></li>
+            <li><span>목록2</span></li>
+            <li><span>목록3</span></li>
+        </ul>
+        <!-- 바 그래프 (백분율 만큼 height값) -->
+        <ul class="bar">
+            <li style="height:100%;"><span></span></li>
+            <li style="height:70%;"><span></span></li>
+            <li style="height:30%;"><span></span></li>
+        </ul>
+    </div>
 </div>
 ```
 
