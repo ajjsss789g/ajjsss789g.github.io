@@ -48,6 +48,7 @@ Slick.js 플러그인을 활용하여 이미지 슬라이드와 함께 제목을
     </ul>
 </div>
 ```
+<br>
 
 ## CSS 코드
 
@@ -72,6 +73,7 @@ Slick.js 플러그인을 활용하여 이미지 슬라이드와 함께 제목을
 .progress > li .tit {display: block;padding: 14px 0 10px;font-size: 14px;font-weight: 500;color: #fff;}
 ```
 .progress > li 선택자에 active 클래스를 추가하면, countingBar 애니메이션이 실행되어 진행 표시줄의 길이가 100%로 확장됩니다. 이렇게 하면 해당 슬라이드의 진행 상태를 시각적으로 표현할 수 있습니다.
+<br>
 
 ## jQuery 코드
 Slick 슬라이드와 진행 표시줄을 조작하는 jQuery 스크립트를 추가합니다.  
